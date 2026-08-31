@@ -169,11 +169,9 @@ section{ padding:96px 0; }
 .check-list b{ display:block; }
 .check-list span{ color:var(--muted); font-size:.9rem; }
 .gallery{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.shot{ border-radius:16px; overflow:hidden; border:1px solid var(--border); aspect-ratio:9/19; background:var(--surface); transition:transform .25s; }
+.shot{ border-radius:16px; overflow:hidden; border:1px solid var(--border); aspect-ratio:16/9; background:var(--surface); transition:transform .25s; }
 .shot:hover{ transform:translateY(-6px); }
 .shot img{ width:100%; height:100%; object-fit:cover; }
-.shot.cap{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; color:var(--muted); font-size:.8rem; border-style:dashed; }
-.shot.cap svg{ width:30px; height:30px; color:var(--primary); }
 
 /* ============================================================
    PORTFÓLIO (OUTROS APPS)
@@ -269,7 +267,7 @@ footer{ border-top:1px solid var(--border); padding:60px 0 32px; background:var(
       <div class="phone float">
         <div class="phone-screen">
           <!-- troque pelo print real do app -->
-          <img src="https://via.placeholder.com/280x590/16213A/F3F6FC?text=Minhas+Financas" alt="Mockup do aplicativo">
+          <img src="shots/app-hero.jpg" alt="Minhas Finanças">
         </div>
       </div>
       <div class="badge-float b1">💸 Controle de gastos</div>
@@ -339,12 +337,9 @@ footer{ border-top:1px solid var(--border); padding:60px 0 32px; background:var(
 
     <!-- Galeria de screenshots -->
     <div class="gallery reveal">
-      <div class="shot"><img src="https://via.placeholder.com/140x300/16213A/F3F6FC?text=Gastos" alt="Registro de gastos"></div>
-      <div class="shot"><img src="https://via.placeholder.com/140x300/111A2E/F3F6FC?text=Orcamento" alt="Orçamento"></div>
-      <div class="shot cap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        Relatórios
-      </div>
+      <div class="shot"><img src="shots/app-1.jpg" alt="Registro de gastos"></div>
+      <div class="shot"><img src="shots/app-2.jpg" alt="Orçamento"></div>
+      <div class="shot"><img src="shots/app-3.jpg" alt="Relatórios"></div>
     </div>
   </div>
 </section>
