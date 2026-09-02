@@ -7,6 +7,11 @@ Aplicativo gratuito de gestão financeira pessoal para Android — sem anúncios
 
 ## Histórico de Versões
 
+### v1.3.4 (correções de segurança)
+- Segurança (XSS): ícones, cores e bandeiras de cartão exibidos em todas as telas agora são **escapados/validados** ao salvar e ao renderizar. Um dado malicioso com HTML/script (ex.: `<img onerror>`) em qualquer ícone/bandeira é neutralizado — não executa em navegador/WebView e não quebra o layout.
+- Bugs: corrigido **travamento no início do app (loop infinito)** quando uma recorrência local tem frequência desconhecida/corrompida — agora há limite de iterações e tratamento de frequência inválida (assume mensal). O app não congela mais ao abrir.
+- Importação da nuvem: categorias, ícones e cores também passam a ser saneados na restauração (camada extra de defesa).
+
 ### v1.3.3 (correções de navegação e segurança)
 - Navegação: o botão voltar agora funciona corretamente nas telas **Ajustes** e **Categorias** (antes, "voltar" nessas telas fechava o app em vez de voltar ao painel).
 - Segurança: IDs vindos da nuvem são validados/saneados (só caracteres `[A-Za-z0-9_-]`), eliminando a possibilidade de injeção de código via dados maliciosos no Firestore/importação; o botão "Pagar" de contas a pagar deixou de usar `onclick` inline.
