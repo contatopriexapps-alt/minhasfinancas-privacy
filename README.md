@@ -7,6 +7,10 @@ Aplicativo gratuito de gestão financeira pessoal para Android — sem anúncios
 
 ## Histórico de Versões
 
+### v1.3.3 (correções de navegação e segurança)
+- Navegação: o botão voltar agora funciona corretamente nas telas **Ajustes** e **Categorias** (antes, "voltar" nessas telas fechava o app em vez de voltar ao painel).
+- Segurança: IDs vindos da nuvem são validados/saneados (só caracteres `[A-Za-z0-9_-]`), eliminando a possibilidade de injeção de código via dados maliciosos no Firestore/importação; o botão "Pagar" de contas a pagar deixou de usar `onclick` inline.
+
 ### v1.3.2 (correções de QA e segurança)
 - Widget: saldo agora igual ao do app quando há transferências entre contas (as transferências se anulam no somatório).
 - Notificações: o interruptor "Lembrete Diário" passou a também controlar os lembretes de contas a pagar/receber (desligar cancela todos; ligar re-agenda) e cada conta ganhou a opção "Notificar no vencimento".
